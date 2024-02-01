@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <title>CV Carlos de la Peña</title>
+
+    </head>
+
+    <body>
+        <div>
+            <nav>
+                <div class="square">
+                    <img class = "Profile-image" src="./Resources/Cabeto2.jpg" alt="Logo">
+                </div>
+                <ul>
+                    <li><a href="#sobre-mi">Sobre mi</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#formacion">Formación</a></li>
+                    <li><a href="#info-contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+        <div class="content">
+            <!-- Contenido principal de la página va aquí -->
+
+            <section id = "sobre-mi">
+                <div>
+                    <h1>Carlos de la Peña</h1>
+                    <h3>Bienvenido a mi pagina web</h3>
+                    <h2>Sobre mi</h2>
+                    <h3>Soy un practicante de ingenieria de sistemas que se encuentra en decimo semestre, me enfoco en el desarrollo web tanto en el apartado del front-end como el del back-end.</h3>
+
+                </div>
+
+                <div class="dev-container">
+                    <img class = "dev" src = "./Resources/code.png">
+                </div>
+
+            </section>
+
+                
+
+            <section id = habilidades>
+                <h1>Habilidades</h1>
+                <div id = habilidades>
+                    <button >
+                        <img src="./Resources/html.png" alt=""> <div><h3>HTML</h3></div>
+                    </button>
+                    <button >
+                        <img src="./Resources/css.png" alt=""> <div><h3>CSS</h3></div>
+                    </button>
+                    <button >
+                        <img src="./Resources/js.png" alt=""> <div><h3>Javascript</h3></div>
+                    </button>
+                    <button >
+                        <img class= "image-container" src="./Resources/spring.png" alt=""> <div><h3>Springboot</h3></div>
+                    </button>
+                    <button >
+                        <img src="./Resources/java.png" alt=""> <div><h3>Java</h3></div>
+                    </button>
+                    <button >
+                        <img src="./Resources/postgre.png" alt=""> <div><h3>PostgreSQL</h3></div>
+                    </button>
+                </div>
+            </section>
+
+            
+            
+            <section id = "formacion">
+                <h1>Formación</h1>
+
+                <ul>
+                    <li><h2>Universidad del magdalena</h2></li>
+
+                    <div class="Studies-grid">
+                        <div class="card">
+                            <img src="./Resources/unimag.png" alt="Card Image">
+                            <div class="card-text">
+                                <h3>Ingenieria de sistemas</h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <li><h2>Udemy</h2></li>
+
+                    <div class="Studies-grid">
+                        <buttom class="card">
+                            <img src="./Resources/nodeJsCurse.jpg" alt="Card Image">
+                            <div class="card-text">
+                                <h3>
+                                    NodeJS: De cero a experto
+                                </h3>
+                            </div>
+                        </buttom>
+
+                        <buttom class="card">
+                            <img src="./Resources/reactCurse.jpg" alt="Card Image">
+                            <div class="card-text">
+                                <h3>
+                                    React: De cero a experto ( Hooks y MERN )
+                                </h3>
+                            </div>
+                        </buttom>
+
+                        <buttom class="card">
+                            <img src="./Resources/springCurse.jpg" alt="Card Image">
+                            <div class="card-text">
+                                <h3>
+                                    Spring Framework 6 & Spring Boot 3 desde cero a experto 2024
+                                </h3>
+                            </div>
+                        </buttom>
+                    </div>
+                </ul>
+            </section>
+
+            <section id = "info-contacto">
+                <h1>Información de contacto</h1>
+
+                <div class="Container-flex">
+                    <buttom class="Contact-card" onclick="copyText('cabetodp@gmail.com')">
+                        <img src="./Resources/email.png">
+                        <div class="Contact-card-text">
+                            <h3>cabetodp@gmail.com</h3>
+                        </div>
+                    </buttom>
+                    
+                    <buttom class="Contact-card" onclick="copyText('+57 3052927115')">
+                        <img src="./Resources/whatsapp.png">
+                        <div class="Contact-card-text">
+                            <h3>+57 3052927115</h3>
+                        </div>
+                    </buttom>
+                    
+                </div>
+                
+                <div class="Container-flex">
+                    <a href="https://github.com/CabetoDP" target="_blank">
+                        <div class="Contact-card">
+                            <img src="./Resources/github.png">
+                            <div class="Contact-card-text">
+                                <h3>CabetoDP</h3>
+                            </div>
+                        
+                        </div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/carlos-alberto-de-la-pe%C3%B1a-j%C3%A1come-0bba3526a/" target="_blank">
+                        <div class="Contact-card">
+                            <img src="./Resources/linkedIn.png">
+                            <div class="Contact-card-text">
+                                <h3>Carlos de la Peña</h3>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                
+            </section>
+            
+        </div>
+    </body>
+
+    <script>
+        function copyText(text) {
+            // Create a temporary input element
+            var tempInput = document.createElement("input");
+            
+            // Set its value to the text you want to copy
+            tempInput.value = text;
+            
+            // Append it to the body
+            document.body.appendChild(tempInput);
+            
+            // Select the text in the input field
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999); // For mobile devices
+            
+            // Copy the text to the clipboard
+            document.execCommand("copy");
+            
+            // Remove the temporary input element
+            document.body.removeChild(tempInput);
+            
+            // Alert the user that the text has been copied (optional)
+            alert("Text has been copied to the clipboard: " + text);
+        }
+    </script>
+</html>
